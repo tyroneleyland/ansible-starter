@@ -1,6 +1,9 @@
 ---
 
-- vars:
+- name: "Installing Tomcat Test"
+  hosts: localhost
+  connection: local 
+  vars:
     tomcat_version: 8.5.23
     
     tomcat_permissions_production: True
