@@ -1,0 +1,18 @@
+---
+
+- hosts: servers
+  become: true
+  vars:
+    tomcat_version: 8.5.23
+    
+    tomcat_permissions_production: True
+    
+    tomcat_users:
+      - username: "tomcat"
+        password: "example1"
+        roles: "tomcat,admin,manager,manager-gui"
+      - username: "exampleuser"
+        password: "example2"
+        roles: "tomcat"        
+  roles:
+   - tomcat-ansible-role
